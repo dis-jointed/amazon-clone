@@ -1,0 +1,52 @@
+.home {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.home::-webkit-scrollbar {
+  display: none;
+}
+
+.home__row {
+  display: flex;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+  scroll-snap-align: center;
+}
+
+.home__image {
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -150px;
+  position: sticky;
+  top: 0;
+  mask-image: linear-gradient(to top rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+.product {
+  animation: 1s slide forwards;
+  animation-iteration-count: 1;
+  transition: 1.2s all ease;
+}
+.product:hover img {
+  transform: scale(1.2);
+  transition: 0.8s all ease;
+}
+@keyframes slide {
+  from {
+    margin-top: -90px;
+    filter: opacity(0);
+  
+  }
+  to {
+    margin-top: 0;
+    filter: opacity(1);
+   
+  }
+}
